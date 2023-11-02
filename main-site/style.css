@@ -950,7 +950,8 @@ background-color: white;
     
     
     .body {
-    
+
+        -webkit-text-size-adjust: 100%;
         background-color: rgb(138, 139, 129);
     
     }
