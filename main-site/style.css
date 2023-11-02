@@ -258,7 +258,8 @@ q:after {
     height: 200px;
     overflow: hidden;
     position: absolute;
-    margin: -150px 0 0 calc(100vw - 120px);
+    margin: -150px 0 0 0;
+    right: 0;
 
 }
 
@@ -699,8 +700,9 @@ q:after {
 
 .project-image-container{
 
+    right: 0;
+    position: absolute;
     width: 42vw;
-    margin: 0 0 0 calc(100vw - 42vw);
     display: flex;
     flex-direction: column;
 
@@ -708,8 +710,9 @@ q:after {
 
 .project-image-container-acre{
 
+    right: 0;
+    position: absolute;
     width: 42vw;
-    margin: 0 0 0 calc(100vw - 42vw);
     display: flex;
     flex-direction: column;
 
@@ -745,7 +748,7 @@ q:after {
 
 .note-image {
 
-    height: 30vh;
+    height: 20vh;
 
 }
 
@@ -796,7 +799,7 @@ q:after {
 
 .body-white {
 
-background-color: white;
+    background-color: white;
     margin: 0 0 0 0;
 
 }
@@ -828,7 +831,7 @@ background-color: white;
 
 .texture-image-container{
 
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -950,8 +953,7 @@ background-color: white;
     
     
     .body {
-
-        -webkit-text-size-adjust: 100%;
+    
         background-color: rgb(138, 139, 129);
     
     }
@@ -1006,7 +1008,8 @@ background-color: white;
         height: 200px;
         overflow: hidden;
         position: absolute;
-        margin: -96px 0 0 calc(100vw - 120px);
+        margin: -96px 0 0 0;
+        right: 0;
     
     }
     
@@ -1412,6 +1415,7 @@ background-color: white;
         position: relative;
         margin: 0 0 0 0;
         padding-top: 20px;
+        align-content: center;
     
     }
 
@@ -1423,6 +1427,7 @@ background-color: white;
         position: absolute;
         margin: 0 0 0 0;
         padding-top: 80vh;
+        align-content: center;
     
     }
     
@@ -1431,6 +1436,7 @@ background-color: white;
         width: 100vw;
         height: auto;
         display: block;
+
     }
 
     .back-button{
@@ -1572,4 +1578,23 @@ background-color: white;
     }
 
     
+}
+
+@media (max-height: 745px) {
+
+
+    .project-description{
+
+        font-family: 'iA Writer Quattro S';
+        font-size: 1.3vh;
+        line-height: 1.5vh;
+        color: black;
+        width: 360px;
+        padding-left: 30px;
+        position: fixed;
+        margin-top: 210px;
+    }
+
+
+
 }
