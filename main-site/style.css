@@ -1,0 +1,1574 @@
+html {
+
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    zoom: 120%;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'iA Writer Quattro S';
+    src: url('iAWriterQuattroS-Regular.eot');
+    src: url('iAWriterQuattroS-Regular#iefix') format('embedded-opentype'),
+        url('iAWriterQuattroS-Regular.woff2') format('woff2'),
+        url('iAWriterQuattroS-Regular.woff') format('woff'),
+        url('iAWriterQuattroS-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'iA Writer Quattro S Bold';
+    src: url('iAWriterQuattroS-Bold.eot');
+    src: url('iAWriterQuattroS-Bold#iefix') format('embedded-opentype'),
+        url('iAWriterQuattroS-Bold.woff2') format('woff2'),
+        url('iAWriterQuattroS-Bold.woff') format('woff'),
+        url('iAWriterQuattroS-Bold.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    padding: 0 0 0 0;
+
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+
+
+
+
+
+.enter-page-body {
+
+    background-color: white;
+
+}
+
+.enter-page-video {
+
+    height: auto;
+    width: 80vw;
+    overflow: hidden;
+    z-index: 1;
+    padding-left: 10vw;
+    padding-top: 10vh;
+
+}
+
+.enter-link-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'iA Writer Quattro S';
+    font-size: 15pt;
+    line-height: 10pt;
+    color: black;
+    width: 100%;
+    position: fixed;
+    padding-top: 32vh;
+    z-index: 99;
+}
+
+.enter-link {
+
+    width: 25vw;
+}
+
+
+
+
+
+
+
+
+
+.body {
+
+    background-color: rgb(138, 139, 129);
+
+}
+
+.about {
+
+    width: 310px;
+    height:100px;
+    position: relative;
+    display: inline-block;
+    margin: 40px  0 0 -36px;
+    z-index: 4;
+
+}
+.about .about-hover{
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 98;
+}
+
+.about:hover .about-hover{
+
+    display: inline;
+
+}
+
+
+.moving-image{
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left 1s ease-in-out;
+    animation: moveImage 3s linear infinite alternate; /* Adjust the duration as needed */
+    width: 176px;
+    z-index: 3;
+}
+
+.link-container { 
+
+    width: 120px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    margin: -150px 0 0 calc(100vw - 120px);
+
+}
+
+@keyframes moveImage {
+    0% {
+        left: 0%; /* Move the image off the left edge of the container */
+    }
+    100% {
+        left: 100%; /* Move the image off the right edge of the container */
+    }
+}
+
+
+
+
+.centering-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 70px 0 0 0;
+    
+}
+
+.homepage-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:100%;
+    max-width: 676px;
+
+}
+
+.project-link {
+    text-decoration: none;
+    width: auto; /* Set the width of individual images */
+    height: auto;
+    padding: 0 0 0 0;
+
+}
+
+.hompage-container img {
+    max-width: 300px;
+    height: auto;
+    padding-top: 30px;
+
+}
+
+.homepage-container a:hover {
+    transform: scale(1.2); /* Scale up the image on hover */
+    top: -20px; 
+}
+
+.homepage-container img:hover {
+    transform: scale(1.15); /* Scale up the image on hover */
+    filter: drop-shadow(3px 3px 3px #262626);
+}
+
+.custom-text {
+    position: absolute;
+    top: -31px; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 5px 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0s;
+    font-family: 'iA Writer Quattro S';
+    font-size: 7pt;
+}
+
+.homepage-container:hover .custom-text {
+    opacity: 1; /* Show the custom text on hover */
+    filter: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cover-block {
+
+    background-color: rgb(138, 139, 129);
+    width: 100%;
+    position: absolute;
+    height: 300px;
+    margin: -660px 0 0 0;
+    z-index: 2;
+
+}
+
+.printed-knit-icon {
+
+    margin-top: -20px !important;
+
+}
+.printed-knit-text {
+
+    top: -45px !important; 
+    left: 0 !important;
+
+}
+
+.upcycled-icon {
+
+    margin-top: 40px !important;
+
+}
+.upcycled-text {
+
+    top: 25px !important;
+    left: 0 !important;
+    padding-left: 34px;
+    
+
+}
+
+.manip-icon {
+
+    margin-top: -3px !important;
+
+}
+.manip-text {
+
+    top: -35px !important; 
+    left: 0 !important;
+    text-align: center;
+    padding: 0 0 0 0;
+
+}
+
+.padded-icon {
+
+    margin-top: -30px !important;
+
+}
+.padded-text {
+
+    top: -58px !important; 
+    left: 0 !important;
+    text-align: center;
+    padding: 0 0 0 0;
+
+}
+
+.acre-icon {
+
+    margin-top: 0px !important;
+
+}
+.acre-text {
+
+    top: -30px !important; 
+    left: 0 !important;
+
+}
+
+.tansegrit-icon {
+
+    margin-top: -41px !important;
+    margin-left: -50px;
+
+}
+.tansegrit-text {
+
+    top: 50px !important;
+    left: 0 !important;
+    width: 100px !important;
+
+}
+
+.krpce-icon {
+
+    margin-top: 15px !important;
+    margin-left: -20px;
+
+}
+.krpce-text {
+
+    top: -5px !important;
+    left: 0 !important;
+    width: 150px;
+    margin-left: -40px;
+
+}
+
+.goggles-icon {
+
+    margin-top: -10px !important;
+    margin-left: 0px;
+
+}
+.goggles-text {
+
+    top: 100px !important;
+    left: 0 !important;
+    width: 100px;
+
+}
+
+
+.sketchbook-icon {
+
+    margin-top: -35px !important;
+    margin-left: 20px;
+
+}
+.sketchbook-text {
+
+    top: 65px !important;
+    left: 0 !important;
+
+}
+
+.texture-icon {
+
+    margin-top: 10px !important;
+    margin-left: -30px;
+}
+.texture-text {
+
+    top: 80px !important;
+    left: 0 !important;
+    margin-left: -70px;
+
+}
+
+.archive-icon {
+
+    margin-top: 0px !important;
+
+}
+.archive-text {
+
+    top: -20px !important;
+    left: 0 !important;
+    margin-left: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-icon{
+
+    width: auto;
+    height: 50px;
+
+}
+
+
+.contact-link {
+    display: inline-block;
+    margin: calc(100vh - 64px) 0 0 calc(-310px + 50px);
+    position: fixed;
+    z-index: 99; 
+    animation: bounce 1s infinite cubic-bezier(0.72, 0.02, 0.31, 0.96);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position (no change) */
+    }
+    50% {
+        transform: translateY(-10px); /* Bounce up by 20 pixels */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portrait {
+
+    width: 100px;
+    height: auto;
+    position: absolute;
+    margin: 94px 0 0 30px;
+    
+}
+
+.about-text{
+
+    font-family: 'iA Writer Quattro S';
+    font-size: 8pt;
+    line-height: 10pt;
+    color: black;
+    width: 360px;
+    padding-left: 30px;
+    position: fixed;
+    margin-top: 210px;
+}
+
+.about-link {
+
+    text-decoration: none;
+    color: black;
+}
+
+.about-link:hover {
+
+    color: red;
+}
+
+.about-image-container {
+    
+    width: 42vw;
+    margin: 0 0 0 calc(100vw - 42vw);
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.back-button{
+
+    width: 100px;
+    height: 67px;
+    padding: 30px;
+    position: fixed;
+    font-family: 'iA Writer Quattro S';
+    font-size: 8pt;
+    line-height: 10pt;
+    color: black;
+    text-decoration: none;
+
+}
+
+.back-button-unfixed{
+
+    width: 100px;
+    height: 67px;
+    padding: 0 0 0 30px;
+    margin-top: -117px;
+    position: absolute;
+
+}
+
+.project-title{
+
+    font-family: 'iA Writer Quattro S Bold';
+    font-size: 8pt;
+    line-height: 11pt;
+    color: black;
+    padding-left: 30px;
+    position: fixed;
+    margin-top: 147px;
+    width: 360px;
+
+}
+
+.project-title-unfixed{
+
+    font-family: 'iA Writer Quattro S Bold';
+    font-size: 8pt;
+    line-height: 11pt;
+    color: black;
+    padding-left: 30px;
+    margin-top: 147px;
+    width: 360px;
+
+}
+
+.project-description{
+
+    font-family: 'iA Writer Quattro S';
+    font-size: 8pt;
+    line-height: 10pt;
+    color: black;
+    width: 360px;
+    padding-left: 30px;
+    position: fixed;
+    margin-top: 210px;
+}
+
+.project-description-unfixed {
+
+    font-family: 'iA Writer Quattro S';
+    font-size: 8pt;
+    line-height: 10pt;
+    color: black;
+    width: 360px;
+    padding-left: 30px;
+    margin-top: 49px;
+
+}
+
+.project-image-container{
+
+    width: 42vw;
+    margin: 0 0 0 calc(100vw - 42vw);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project-image-container-acre{
+
+    width: 42vw;
+    margin: 0 0 0 calc(100vw - 42vw);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project-image{
+
+    width: 42vw;
+    height: auto;
+}
+
+
+.caption{
+
+    font-family: 'iA Writer Quattro S';
+    font-size: 8pt;
+    line-height: 11pt;
+    color: black;
+    padding: 10px 0 10px 0;
+
+}
+
+.note-image-container {
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 20px;
+    padding-left: 30px;
+
+}
+
+
+.note-image {
+
+    height: 30vh;
+
+}
+
+.in-progress {
+
+    color: rgb(0, 255, 0);
+    font-family: 'iA Writer Quattro S' !important;
+    font-size: 8pt;
+    line-height: 10pt;
+}
+
+
+
+
+
+
+
+
+
+.tansegrit-custom-image{
+
+    width: 15vw;
+    height: auto;
+    padding-top: 20px;
+
+}
+
+.tansegrit-custom-image-2{
+
+    width: 20vw;
+    height: auto;
+    
+}
+
+.note-tansegrit-desktop {
+
+    height: 40vh !important;
+    width: auto;
+
+}
+
+.bag-custom-image{
+
+    width: 20vw;
+    height: auto;
+}
+
+
+.body-white {
+
+background-color: white;
+    margin: 0 0 0 0;
+
+}
+
+
+
+
+.background-texture-library {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding-top: 50px;
+    z-index: 1;
+
+}
+
+.texture-videos {
+
+    padding: 20vw 0 0 12vw;
+    width: 37vw;
+    height: auto;
+
+}
+
+.texture-image-container{
+
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding-top: 25vw;
+    z-index: 99;
+    justify-content: center;
+
+}
+
+
+.background-sketchbook {
+
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding-top: 50px;
+    z-index: 1;
+    background-image: url(sketchbook/images/sketchbook-desktop.jpg);
+    background-size: 100% ; /* Set background size to match container size */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+}
+
+.archive-image-container {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    position: absolute;
+    margin-top: 40px;
+
+}
+
+.archive-image {
+
+    width: 48%;
+    height: auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+
+
+    .enter-page-body {
+
+        background-color: white;
+    
+    }
+    
+    .enter-page-video {
+    
+        height: auto;
+        width: 100vw;
+        overflow: hidden;
+        z-index: 1;
+        padding-top: 35vh;
+    
+    }
+    
+    .enter-link-container{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'iA Writer Quattro S';
+        font-size: 15pt;
+        line-height: 10pt;
+        color: black;
+        width: 100%;
+        position: fixed;
+        padding-top: 47vh;
+        z-index: 99;
+    }
+    
+    .enter-link {
+    
+        width: 49vw;
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .body {
+    
+        background-color: rgb(138, 139, 129);
+    
+    }
+    
+    .about {
+    
+        width: 310px;
+        height:100px;
+        position: relative;
+        display: inline-block;
+        margin: 40px  0 0 -36px;
+    
+    }
+    .about .about-hover{
+    
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 98;
+    }
+    
+    .about:hover .about-hover{
+    
+        display: inline;
+    
+    }
+
+    .about-image {
+
+        width: 270px !important;
+    }
+    
+    .about-hover {
+
+        width: 270px !important;
+    }
+    
+    .moving-image{
+        
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: left 1s ease-in-out;
+        animation: moveImage 3s linear infinite alternate; /* Adjust the duration as needed */
+        width: 126px;
+    }
+    
+    .link-container { 
+    
+        width: 120px;
+        height: 200px;
+        overflow: hidden;
+        position: absolute;
+        margin: -96px 0 0 calc(100vw - 120px);
+    
+    }
+    
+    @keyframes moveImage {
+        0% {
+            left: 0%; /* Move the image off the left edge of the container */
+        }
+        100% {
+            left: 100%; /* Move the image off the right edge of the container */
+        }
+    }
+    
+    
+    
+    
+    .centering-container{
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 50px 0 0 0;
+        
+    }
+    
+    .homepage-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 278px;
+        padding-left: 20px;
+    
+    }
+    
+    .project-link {
+        text-decoration: none;
+        width: auto; /* Set the width of individual images */
+        height: auto;
+        padding-top: 20px;
+    
+    }
+    
+    .hompage-container img {
+        max-width: 300px;
+        height: auto;
+        padding-top: 30px;
+    
+    }
+    
+    .homepage-container a:hover {
+        transform: scale(1.2); /* Scale up the image on hover */
+        top: -20px; 
+    }
+    
+    .homepage-container img:hover {
+        transform: scale(1.15); /* Scale up the image on hover */
+        filter: drop-shadow(3px 3px 3px #262626);
+    }
+    
+    .custom-text {
+        position: absolute;
+        top: -31px; 
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: black;
+        padding: 5px 0;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0s;
+        font-family: 'iA Writer Quattro S';
+        font-size: 7pt;
+    }
+    
+    .homepage-container:hover .custom-text {
+        opacity: 1; /* Show the custom text on hover */
+        filter: none;
+    }
+
+
+    .contact-icon{
+
+        width: auto;
+        height: 35px;
+    
+    }
+    
+    
+    .contact-link {
+        display: inline-block;
+        margin: calc(100vh - 47px) 0 0 calc(-310px + 50px);
+        position: fixed;
+        z-index: 99; 
+        animation: bounce 1s infinite cubic-bezier(0.72, 0.02, 0.31, 0.96);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .cover-block {
+
+        background-color: rgb(138, 139, 129);
+        width: 100%;
+        position: absolute;
+        height: 300px;
+        margin: -800px 0 0 0;
+        z-index: 2;
+    
+    }
+    
+    .printed-knit-icon {
+    
+        margin-top: -20px !important;
+        margin-left: -10px;
+        width: 60px !important;
+    
+    }
+    .printed-knit-text {
+    
+        top: -25px !important;
+        left: -15px !important;
+        width: 70px;
+    
+    }
+    
+    .upcycled-icon {
+    
+        margin-top: 40px !important;
+        margin-left: 21px;
+        width: 80px !important;
+    
+    }
+    .upcycled-text {
+    
+        top: 35px !important;
+        left: 0 !important;
+        
+    
+    }
+    
+    .manip-icon {
+    
+        margin-top: -3px !important;
+        width: 80px !important;
+    
+    }
+    .manip-text {
+    
+        top: -15px !important;
+        left: 0px !important;
+        text-align: right;
+        padding: 0 0 0 0;
+    
+    }
+    
+    .padded-icon {
+    
+        margin-top: -30px !important;
+        width: 90px !important;
+        margin-left: -43px;
+    
+    }
+    .padded-text {
+    
+        top: 87px !important;
+        left: -45px !important;
+        text-align: left;
+        padding: 0 0 0 0;
+    
+    }
+    
+    .acre-icon {
+    
+        margin-top: 0px !important;
+        width: 120px !important;
+    
+    }
+    .acre-text {
+    
+        top: 85px !important;
+        left: -95px !important;
+    
+    }
+    
+    .tansegrit-icon {
+    
+        margin-top: -11px !important;
+        margin-left: -20px;
+        width: 80px !important;
+    
+    }
+    .tansegrit-text {
+    
+        top: 85px !important;
+        left: 25px !important;
+        width: 50px !important;
+        text-align: right;
+    
+    }
+    
+    .krpce-icon {
+    
+        margin-top: -25px !important;
+        margin-left: -48px;
+        width: 120px !important;
+    
+    }
+    .krpce-text {
+    
+        top: -30px !important;
+        left: 0 !important;
+        width: 150px;
+        margin-left: -60px;
+    
+    }
+    
+    .goggles-icon {
+    
+        margin-top: -10px !important;
+        margin-left: 5px;
+        width: 80px !important;
+    
+    }
+    .goggles-text {
+    
+        top: 75px !important;
+        left: -85px !important;
+        width: 100px;
+    
+    }
+    
+    
+    .sketchbook-icon {
+    
+        margin-top: -35px !important;
+        margin-left: 10px;
+        width: 90px !important;
+    
+    }
+    .sketchbook-text {
+    
+        top: 65px !important;
+        left: 0 !important;
+    
+    }
+
+    
+    .texture-icon {
+    
+        margin-top: -10px !important;
+        margin-left: -49px;
+        width: 100px !important;
+        
+    }
+    .texture-text {
+    
+        top: 70px !important;
+        left: 20px !important;
+        margin-left: -70px;
+        text-align: left;
+    
+    }
+
+    
+    .archive-icon {
+    
+        margin-top: 0px !important;
+        margin-left: 52px;
+        width: 80px !important;
+    
+    }
+    .archive-text {
+    
+        top: 15px !important;
+        left: -25px !important;
+        margin-left: 30px;
+    
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .about-text{
+
+        font-family: 'iA Writer Quattro S';
+        font-size: 8pt;
+        line-height: 10pt;
+        color: black;
+        width: 360px;
+        padding-left: 30px;
+        position: absolute;
+        margin-top: 210px;
+    }
+
+
+    .about-image-container{
+
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin: 0 0 0 0;
+        padding-top: 483px;
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    .project-title{
+    
+        font-family: 'iA Writer Quattro S';
+        font-size: 8pt;
+        line-height: 11pt;
+        color: black;
+        padding-left: 30px;
+        padding-top: 129px;
+        margin-top: 0;
+        display: block;
+        position: relative;
+    }
+    
+    .project-description{
+    
+        font-family: 'iA Writer Quattro S';
+        font-size: 8pt;
+        line-height: 10pt;
+        color: black;
+        width: 96vw;
+        max-width: 371px;
+        padding-left: 30px;
+        padding-top: 30px;
+        margin-top: 0;
+        display: block;
+        position: relative;
+
+    }
+
+    .project-image-container{
+
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0 0 0 0;
+        padding-top: 20px;
+    
+    }
+
+    .project-image-container-acre{
+
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin: 0 0 0 0;
+        padding-top: 80vh;
+    
+    }
+    
+    .project-image{
+    
+        width: 100vw;
+        height: auto;
+        display: block;
+    }
+
+    .back-button{
+
+        padding: 30px;
+        z-index: 99;
+    
+    }
+
+    .back-button-image {
+
+        width: 100px !important;
+    }
+
+    .note-image-container {
+
+        position: relative;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-top: 30px;
+    
+    }
+    
+    
+    .note-image {
+    
+        width: 85vw;
+        height: auto;
+    
+    }
+    
+    .in-progress {
+    
+        color: rgb(0, 255, 0);
+        font-family: 'iA Writer Quattro S' !important;
+        font-size: 8pt;
+        line-height: 10pt;
+        color: black;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .background-sketchbook {
+
+        width: 100%;
+        height: 180vh;
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        align-items: center;
+        margin: 0 0 0 0;
+        padding-top: 50px;
+        z-index: 1;
+        background-image: url(sketchbook/images/sketchbook-mobile.jpg);
+        background-size: 100% ; /* Set background size to match container size */
+        background-repeat: no-repeat; /* Prevent background from repeating */
+    }
+
+    .tansegrit-custom-image{
+
+        width: 40vw;
+        height: auto;
+        padding-top: 20px;
+    
+    }
+    
+    .note-tansegrit-desktop {
+    
+        height: 40vh !important;
+        width: auto;
+    
+    }
+
+    .bag-custom-image{
+
+        width: 50vw;
+        height: auto;
+    }
+
+
+    .archive-image-container {
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-content: center;
+        position: absolute;
+        margin-top: 40px;
+        justify-content: space-between;
+    
+    }
+    
+    .archive-image {
+    
+        width: 95%;
+        height: auto;
+    
+    }
+
+
+    .project-image-container-acre{
+
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0 0 0 0;
+        padding-top: 20px;
+    
+    }
+
+
+    .caption{
+
+        font-family: 'iA Writer Quattro S';
+        font-size: 8pt;
+        line-height: 11pt;
+        color: black;
+        padding: 10px 0 10px 30px;
+    
+    }
+
+    
+}
