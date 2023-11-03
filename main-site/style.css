@@ -616,11 +616,12 @@ q:after {
 
 }
 
-.about-image {
+.home-image {
 
     height: 100vh;
     width: auto;
 }
+
 
 
 
@@ -1380,9 +1381,9 @@ q:after {
     
     }
 
-    .about-image {
+    .home-image {
 
-        width: 100% !important;
+        width: 100%;
         height: auto;
         display: block;
     }
