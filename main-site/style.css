@@ -616,6 +616,11 @@ q:after {
 
 }
 
+.about-image {
+
+    height: 100vh;
+    width: auto;
+}
 
 
 
@@ -1365,13 +1370,21 @@ q:after {
 
     .about-image-container{
 
-        width: 100vw;
+        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         position: absolute;
         margin: 0 0 0 0;
         padding-top: 483px;
     
+    }
+
+    .about-image {
+
+        width: 100% !important;
+        height: auto;
+        display: block;
     }
 
 
